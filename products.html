@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MasalaBazar - Products</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #333333;
+            background-color: #fff8ef;
+        }
+
+        header {
+            padding: 18px 8%;
+            color: white;
+            background-color: #9b2c20;
+        }
+
+        header h1 {
+            display: inline;
+        }
+
+        nav {
+            float: right;
+            padding-top: 5px;
+        }
+
+        nav a {
+            margin-left: 20px;
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 40px 8%;
+            text-align: center;
+        }
+
+        .product {
+            display: inline-block;
+            width: 220px;
+            margin: 12px;
+            padding: 20px;
+            vertical-align: top;
+            background-color: white;
+            border: 1px solid #ead9c4;
+            border-radius: 6px;
+        }
+
+        .product h2 {
+            color: #9b2c20;
+        }
+
+        button {
+            padding: 10px 18px;
+            color: white;
+            background-color: #9b2c20;
+            border: 0;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        footer {
+            padding: 18px;
+            text-align: center;
+            color: white;
+            background-color: #4a241c;
+        }
+
+        @media (max-width: 600px) {
+            header h1,
+            nav {
+                display: block;
+                float: none;
+                text-align: center;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 12px 8px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MasalaBazar</h1>
+        <nav>
+            <a href="index.html" id="homeLink">Home</a>
+            <a href="products.html">Products</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Our Products</h1>
+        <p>Choose from our selection of quality spices.</p>
+
+        <div class="product">
+            <h2>Turmeric Powder</h2>
+            <p>Earthy flavor and rich color.</p>
+            <strong>₹120 / 250g</strong>
+            <br><br>
+            <button onclick="showMessage('Turmeric Powder')">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <h2>Garam Masala</h2>
+            <p>A balanced blend for everyday cooking.</p>
+            <strong>₹180 / 250g</strong>
+            <br><br>
+            <button onclick="showMessage('Garam Masala')">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <h2>Red Chili Powder</h2>
+            <p>Bold heat and vibrant color.</p>
+            <strong>₹140 / 250g</strong>
+            <br><br>
+            <button onclick="showMessage('Red Chili Powder')">Add to Cart</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 MasalaBazar</p>
+    </footer>
+
+    <script>
+        document.getElementById("homeLink").addEventListener("click", function (event) {
+            event.preventDefault();
+            window.location.href = "index.html";
+        });
+
+        function showMessage(productName) {
+            alert(productName + " has been added to your cart.");
+        }
+    </script>
+</body>
+</html>
